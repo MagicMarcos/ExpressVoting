@@ -10,20 +10,22 @@
 - Express
 - MongoDB
 - Mongoose
+- Socket.io
 
 ## Reflections and Lessons Learned:
 
-<p>This was a really neat exercise in using a new (to me) tech in firebase. It was extremely easy to use, and the documentation was very straight-forward which was helpful in getting the application running. </p>
+<p>This was a really neat exercise in using a new (to me) tech in Socket.io. It was extremely easy to use, and the documentation was very straight-forward which was helpful in getting the application running. </p>
 
 ## Optimizations
 
-<p> As it stands, local storage is used to track which users have voted. This is of course a huge flaw! So future implementations we can look into fixing this issue. We can do this by adding authorization and tracking users and their votes. </p>
+<p> User authentication to come in future integrations </p>
 
 ## Errors and bugs
 
-<p> If something is behaving weirdly or unexpectedly, it is a bug! Please report it <a href="https://github.com/MagicMarcos/firebaseVoting/issues">here</a>.</p>
+<p> If something is behaving weirdly or unexpectedly, it is a bug! Please report it <a href="https://github.com/MagicMarcos/ExpressVoting/issues">here</a>.</p>
 
 ## Running locally
 
-- Create a firebase account
-- Create a file called firebaseConfig.js and add your config variables to that page and export them as firebaseConfig
+- Create a .env file
+- Add your PORT and DB_string
+- use `npm run start`

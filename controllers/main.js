@@ -7,7 +7,12 @@ module.exports = {
     try {
       const contenders = await Contender.find();
       const totalVotes = contenders.reduce((a, c) => a + c.votes, 0);
-      await res.render('index.ejs', {
+      const result = {
+        contenders: contenders,
+        totalVotes: totalVotes,
+      };
+      req.socketIO.emit('update', result);
+      res.render('index.ejs', {
         contenders: contenders,
         totalVotes: totalVotes,
         hasVoted: hasVoted,
